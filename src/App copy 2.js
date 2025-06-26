@@ -1,5 +1,6 @@
 // src/App.js
 import React, { useEffect } from "react";
+import AppShell from "./components/AppShell";
 import { register } from "./serviceWorkerRegistration";
 import CompanyRegulationsChatbot from "./CompanyRegulationsChatbot";
 
@@ -20,7 +21,11 @@ function App() {
     });
   }, []);
 
-  return <CompanyRegulationsChatbot />;
+  return (
+    <AppShell>
+      <CompanyRegulationsChatbot />
+    </AppShell>
+  );
 }
 
 export default App;
